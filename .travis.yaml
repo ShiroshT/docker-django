@@ -1,14 +1,21 @@
-sudo: required
-services:
-  - docker
+language: java
+sudo: false # faster builds
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 
-# before_install:
-#   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+# sudo: required
+# services:
+#   - docker
 
-# deploy:
-#   provider: script
-#   script: bash ./deploy.sh
-#   on:
-#     branch: master
+
+# # before_install:
+# #   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+# # deploy:
+# #   provider: script
+# #   script: bash ./deploy.sh
+# #   on:
+# #     branch: master
 
