@@ -2,7 +2,11 @@ sudo: required
 language: python
 python:
   - 3.6
-
+  
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
+    
 services:
   - docker
 
