@@ -10,6 +10,8 @@ env:
 services:
   - docker
 
+# this is the docker user name and password taken from the enviro
+
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
